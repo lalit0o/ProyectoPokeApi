@@ -1,12 +1,13 @@
 
 import './App.css'
 import { useState, useEffect } from 'react';
-
+import Tarjeta from './components/PokemonCard';
 
 type Pokemon = {
   name: string;
   url: string;
 }
+
 
 type ApiResponse = {
   count: number;
@@ -21,7 +22,7 @@ export default function App() {
   useEffect(() => {
     async function obtenerDatos() {
       try {
-        const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=30&offset=0');
+        const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=30');
 
         if (!response.ok) {
           throw new Error(`Error HTTP:${response.status}`);
@@ -38,9 +39,13 @@ export default function App() {
     obtenerDatos();
   }, [])
 
-  return (<div>{datos ? datos.results.map((pokemon) =>(
-    
-    <p>{pokemon.name}</p>)
+  return (<div className=' bg-gray-400 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 '>{datos ? datos.results.map((pokemon) => (
+
+    <div className='flex justify'>
+      <Tarjeta pokemon={pokemon}/>
+    </div>
+
+  )
 
   ) : "Cargando..."}
 
