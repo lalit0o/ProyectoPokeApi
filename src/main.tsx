@@ -10,7 +10,7 @@ import {
 
 import App from './App.tsx'
 import Header from './components/Header.tsx'
-import Detalle from './pages/DetallePokemon.tsx'
+import DetallePokemon from './pages/DetallePokemon.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -20,7 +20,7 @@ createRoot(document.getElementById('root')!).render(
 
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/Detalle" element={<Detalle />} />
+        <Route path="/DetallePokemon/:nombre" element={<DetallePokemon />} />
       </Routes>
 
     </BrowserRouter>
