@@ -11,6 +11,7 @@ import {
 import App from './App.tsx'
 import Header from './components/Header.tsx'
 import DetallePokemon from './pages/DetallePokemon.tsx'
+import Comparar from './pages/Comparar.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -21,6 +22,7 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/DetallePokemon/:nombre" element={<DetallePokemon />} />
+        <Route path="/Comparar" element={<Comparar/>}/>
       </Routes>
 
     </BrowserRouter>
