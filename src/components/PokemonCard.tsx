@@ -7,7 +7,7 @@ import { useStore } from '../hooks/useStore';
 export default function Tarjeta({ pokemon }: { pokemon: Pokemon }) {
     const agregar = useStore((state)=>state.agregar);
     const [esFavorito, setEsFavorito] = useState<boolean>(false);
-    const urlParts = pokemon.url ? pokemon.url.split('/') : [];
+    const urlParts = pokemon.url ? pokemon.url.split('/') : []; 
     const pokemonId = urlParts[urlParts.length - 2];
     const imagenUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`;
     useEffect(() => {

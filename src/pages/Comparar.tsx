@@ -1,4 +1,4 @@
-import Tarjeta from "../components/PokemonCard";
+import DetallePokemon from "../components/DetallePoke";
 import { useStore } from "../hooks/useStore";
 
 export default function Comparar(){
@@ -7,9 +7,10 @@ export default function Comparar(){
 
 
     return (
-        <div className="flex flex-row">
+        <div className="flex flex-row justify-center gap-12">
+            <h1 className="flex justify-center text-3xl bold">Comparar</h1>
             {pokemones.map((pokemon)=>(
-                <Tarjeta pokemon={pokemon}/>
+                <DetallePokemon objeto={pokemon}/>
             ))}
         </div>
     )
