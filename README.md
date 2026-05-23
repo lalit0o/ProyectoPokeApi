@@ -1,73 +1,33 @@
-# React + TypeScript + Vite
+# Proyecto PokeApi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Para ejecutar el proyecto, lo único que necesitas es clonar el repositorio en una nueva carpeta con el siguiente comando en tu terminal
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```terminal
+git clone https://github.com/lalit0o/ProyectoPokeApi.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Una vez clonado, necesitarás dirigirirte a la carpeta del proyecto con el siguiente comando
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```terminal
+cd ProyectoPokeApi
 ```
+
+Dentro de la carpeta, necesitarás tener instalado el gestor de paquetes pnpm. Si no lo tienes instalado, puedes ejecutar el siguiente comando
+
+```terminal
+npm install -g pnpm
+```
+
+Para finalizar, tendrás que ejecutar el comando
+```terminal
+pnpm install
+```
+Esto te permitirá descargar todas las dependencias del proyecto.
+
+Y listo, solo necesitas hacer
+```terminal
+pnpm run dev
+```
+Para ejecutar el proyecto y visualizar la aplicación web
+
+
