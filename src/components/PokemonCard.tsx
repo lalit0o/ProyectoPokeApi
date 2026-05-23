@@ -40,7 +40,7 @@ export default function Tarjeta({ pokemon }: { pokemon: Pokemon }) {
                 onClick={toggleFavorito}
                 className="absolute top-2 right-2 text-2xl "
             >
-                {esFavorito ? '⭐' : '☆'}
+                {esFavorito ? '❤️' : '💔'}
             </button>
 
             

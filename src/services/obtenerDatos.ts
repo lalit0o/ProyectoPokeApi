@@ -1,10 +1,13 @@
-import type { Pokemon } from "../types/pokemon.interface";
-
 type ApiResponse = {
     count: number;
     next: string | null;
     previous: string | null;
-    results: Pokemon[]
+    results: ListadoPokemon[]
+}
+
+type ListadoPokemon = {
+    name: string;
+    url: string;
 }
 
 
@@ -18,7 +21,7 @@ export async function obtenerDatos() {
         }
 
         const resultado: ApiResponse = await response.json();
-        return resultado;
+        return resultado.results;
 
 
     } catch (error) {

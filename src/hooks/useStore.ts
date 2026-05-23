@@ -1,30 +1,33 @@
-import type { Pokemon } from '../types/pokemon.interface'
+import { create } from 'zustand'
 
-import {create} from 'zustand'
+type ListadoPokemon = {
+    name: string;
+    url: string;
+}
 
 
 
 
 type Store = {
-    pokemones: Pokemon[]
-    agregar:(pokemon:Pokemon)=>void;
-    eliminar:(nombre:string)=>void
+    pokemones: ListadoPokemon[]
+    agregar: (pokemon: ListadoPokemon) => void;
+    eliminar: (nombre: string) => void
 }
 
 
 
-export const useStore = create<Store>()((set,get)=>({
-    pokemones:[],
-    agregar:(pokemon)=>{
+export const useStore = create<Store>()((set, get) => ({
+    pokemones: [],
+    agregar: (pokemon) => {
         const pokemones = get().pokemones;
-        set({pokemones:[...pokemones,pokemon]})
+        set({ pokemones: [...pokemones, pokemon] })
 
     },
-    eliminar:(nombre)=>{
-        set((state)=>({
-            pokemones:state.pokemones.filter((pokemon)=>pokemon.name!==nombre)
+    eliminar: (nombre) => {
+        set((state) => ({
+            pokemones: state.pokemones.filter((pokemon) => pokemon.name !== nombre)
         }))
-        
+
     }
 
 }))
