@@ -85,7 +85,7 @@ export default function App() {
       <h1 className='text-xl'>Pokemones seleccionados</h1>
       {pokemones.map((pokemon) => (
         <div className='flex flex-row gap-3 mt-4 mb-4'>
-          <p className='capitalize bg-green-400'>{pokemon.name}</p>
+          <p className='capitalize bg-green-400 p-3 rounded-3xl'>{pokemon.name}</p>
           <button className="cursor-pointer" onClick={() => eliminar(pokemon.name)}>Eliminar pokemon</button>
         </div>
       ))}

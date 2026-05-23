@@ -31,7 +31,7 @@ export default function DetallePokemon({objeto}:{objeto:Poke}) {
                 <p className=" flex text-4xl capitalize font-bold mt-4 bg-blue-400 p-4 text-center justify-center rounded-3xl">{pokemon?.name}</p>
                 <img src={pokemon?.sprites.front_default} width={500} height={500} alt={pokemon?.name} className="mx-auto" />
 
-                <p className="self-start font-bold">Tipos: </p>
+                <p className="self-start font-bold">Tipo(s): </p>
                 <div className="flex flex-row gap-5">
                     {pokemon?.types.map((tipo) => (
                         <span className="bg-amber-400 self-start rounded-2xl px-5 text-black capitalize" key={tipo.slot}>
